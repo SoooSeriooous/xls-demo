@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.util.Set;
 import java.util.UUID;
 
+/**
+ * Схема БД
+ */
 @Entity(name = "schema")
 @Table(name = "schemas")
 @Getter

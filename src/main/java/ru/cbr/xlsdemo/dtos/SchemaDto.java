@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import java.util.Map;
 
+/**
+ * Сущность для хранения данных по схемам и таблицам
+ */
 @Getter
 @Setter
 @AllArgsConstructor

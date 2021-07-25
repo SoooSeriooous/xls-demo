@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ * Компонент для формирования xls-файла с заданными настройками
+ */
 @Component
 public class WorkbookComponent {
 
