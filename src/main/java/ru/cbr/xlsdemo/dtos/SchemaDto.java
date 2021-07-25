@@ -10,6 +10,6 @@ import java.util.Map;
 @Setter
 @AllArgsConstructor
 public class SchemaDto {
-    private String name;
-    private String table_name;
+    private String schemaName;
+    private String tableName;
 }

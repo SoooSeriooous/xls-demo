@@ -1,6 +1,8 @@
 package ru.cbr.xlsdemo.controllers;
 
 import javassist.bytecode.ByteArray;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -22,10 +24,15 @@ public class ReportController {
         this.reportService = reportService;
     }
 
+    /**
+     * Ручка для получения выгрузки отчета
+     * @param schemaId
+     * @return
+     */
     @GetMapping
-    public ResponseEntity<byte[]> getReport(@RequestParam Long schemaId) {
+    public ResponseEntity<Resource> getReport(@RequestParam Long schemaId) {
 
-        byte[] report = reportService.createReport(schemaId);
+        Resource report = reportService.createReport(schemaId);
 
         String fileName = "Report_"+ LocalDate.now() + "_schema_" + schemaId + ".xls";
 
