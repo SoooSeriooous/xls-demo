@@ -4,10 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Map;
+
 
 /**
- * Сущность для хранения данных по схемам и таблицам
+ * Сущность для данных по схемам и таблицам
  */
 @Getter
 @Setter

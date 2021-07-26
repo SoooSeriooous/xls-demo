@@ -27,8 +27,9 @@ public class WorkbookComponent {
      */
     public void createSheets(XSSFWorkbook workbook, String name, int columns) {
         final XSSFSheet sheet = workbook.createSheet(name);
+        final int width = 6000;
         for (int i = 0; i < columns; i++) {
-            sheet.setColumnWidth(i, 6000);
+            sheet.setColumnWidth(i, width);
         }
     }
 
@@ -46,9 +47,11 @@ public class WorkbookComponent {
         headerStyle.setFillForegroundColor(IndexedColors.LIGHT_BLUE.getIndex());
         headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 
+        final String fontName = "Arial";
+        final short fontSize = 16;
         XSSFFont font = workbook.createFont();
-        font.setFontName("Arial");
-        font.setFontHeightInPoints((short) 16);
+        font.setFontName(fontName);
+        font.setFontHeightInPoints(fontSize);
         font.setBold(true);
         headerStyle.setFont(font);
 

@@ -9,7 +9,7 @@ import javax.persistence.*;
  * Таблица из схемы
  */
 @Entity(name = "table")
-@Table(name = "tables")
+@Table(name = "TABLES")
 @Getter
 @Setter
 public class Tables {
